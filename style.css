@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Aileron';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Aileron' ), url('Aileron-Regular.otf') format("opentype");
+}
+@font-face {
+    font-family: 'Blink';
+    font-style: normal;
+    font-weight: 100;
+    src: local('bink' ), url('BlinkUltraWide-B9Ln.otf') format("opentype");
+}
+body{
+    background-image: url(images/art-gfd50d2504_1280.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+.item1 { grid-area: name; }
+.item2 { grid-area: blog; }
+.item3 { grid-area: socials; }
+.item4 { grid-area: projects; }
+.item5 { grid-area: continue; }
+.item6 { grid-area: signoff; }
+
+.grid_container{
+    display: grid;
+  grid-template-areas:
+  'name name blog blog blog blog'
+  'name name socials socials socials socials'
+  'projects projects projects projects projects projects'
+  '. . . .  continue continue'
+  'signoff signoff signoff signoff signoff signoff';
+  gap: 10px;
+  margin: 10%;
+  margin-top: 2%;
+  margin-bottom: auto;
+}
+.box{
+    background-color: white;
+    border-radius: 15px;
+}
+.blogbox{
+    background-color: white;
+    border-radius: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+section{
+    max-width: 100%;
+    max-height: 100%;
+    float: left;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+#name{
+    color: white;
+    margin-top: inherit;
+}
+h2{
+    font-size: xxx-large;
+    margin: 0;
+    font-family: 'Blink';
+    text-align: center;
+    color: #FFAA2A;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px black;
+}
+h3{
+    font-size: xx-large;
+    font-family:'Aileron';
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+#blogname{
+ max-width: 80%;
+ position: absolute;
+}
+#socials{
+    width: 100%;
+}
+.social{
+    width: 12%;
+    margin: 3%;
+}
+#projects{
+    width: 100%;
+    display: inline-flex;
+    position: relative;
+    float: left;
+    gap: 10px;
+}
+.project_frame{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    width: 100%;
+    max-height: 100%;
+}
+#projects img{
+    max-width: 100%;
+}
+#proimg1{
+    bottom: 35%;
+    position: relative;
+}
+#proimg2{
+bottom: 55%;
+position: relative;
+}
+#proimg3{
+
+}
+.project{
+    float: left;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.project p{
+    margin: 2%;
+}
+#projects a{ 
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+}
+#continue{
+    width: 100%;
+    margin-right: 10%;
+}
+#continue h4{
+    margin: 5%;
+    font-size: 3vh;
+    font-family:'Aileron';
+    color: darkmagenta;
+}
+#signoff{
+    bottom: 10%;
+    left: 25%;
+    color: white;
+    position: absolute;
+}
+#signoff p{
+    text-shadow: 1px 1px darkmagenta;
+}
+#signoff a{
+    text-decoration: none;
+    color: white;
+}
+p{
+    font-family:'Aileron';
+}
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .grid_container{
+        display: grid;
+        grid-template-areas:
+        'name'
+        'socials'
+        'blog'
+        'projects'
+        'projects'
+        'projects'
+        'continue'
+        'signoff';
+        gap: 10px;
+        margin: 10%;
+        margin-top: 2%;
+        margin-bottom: auto;
+    }
+    #name{
+        margin-top: 8%;
+    }
+    h2{
+        font-size: xx-large;
+    }
+
+    h3{
+        font-size: x-large;
+    }
+
+    #projects{
+        display: inline-grid;
+    }
+
+    .project_frame {
+        width: 50%;
+        float: right;
+    }
+
+    .project p {
+        text-align: center;
+    }
+
+    #signoff{
+        bottom: 0;
+
+  }
